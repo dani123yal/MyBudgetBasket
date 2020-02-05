@@ -1,41 +1,37 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-header >
-        <ion-toolbar color="tertiary">
+     
+        <ion-card color="dark">
+          <ion-item lines="none" color="dark">
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>
+              Menu
+            </ion-title>
+          </ion-item>
           
-          <ion-card color="tertiary">
-            <ion-item lines="none" color="tertiary">
-              <ion-buttons slot="start">
-                <ion-menu-button></ion-menu-button>
-              </ion-buttons>
-              <ion-title>
-                Menu
-              </ion-title>
-            </ion-item>
-            
-            <ion-card-header>
-                
+          <ion-card-header>
+              
+        
+            <img style="width: 50%;" src="https://i.dlpng.com/static/png/4253050-avatar-facebook-profile-user-profile-icon-facebook-profile-png-512_512_preview.webp" />
+         
+            <ion-card-title>Daniyal Baig</ion-card-title>
+            <ion-card-subtitle>daniibaigg@gmail.com</ion-card-subtitle>
+          </ion-card-header>
           
-              <img style="width: 50%;" src="https://i.dlpng.com/static/png/4253050-avatar-facebook-profile-user-profile-icon-facebook-profile-png-512_512_preview.webp" />
-           
-              <ion-card-title>Daniyal Baig</ion-card-title>
-              <ion-card-subtitle>daniibaigg@gmail.com</ion-card-subtitle>
-            </ion-card-header>
-            
-          </ion-card>
-        </ion-toolbar>
-      </ion-header>
+        </ion-card>
       
       
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             
-            <ion-card button  [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-card  button  [routerDirection]="'root'" [routerLink]="[p.url]">
               
                 
-                <ion-item lines="none">
+                <ion-item color="light" lines="none">
               
                   <ion-icon slot="start" [name]="p.icon"></ion-icon>
                   <ion-label>
